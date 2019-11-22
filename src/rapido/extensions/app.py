@@ -9,10 +9,13 @@ from zope.component import queryUtility
 from zope.interface import implements
 from zope.pagetemplate.pagetemplate import PageTemplate
 
-from rapido.core import exceptions
+from rapido.core import exceptions, app
 from rapido.core.app import Context
 from rapido.core.interfaces import IRapidable, IRapidoApplication
 
+import requests
+
+app.safe_modules.requests = requests
 
 class RapidoTemplateFile(PageTemplate):
 
