@@ -33,18 +33,18 @@ Bug fixes:
 
 New features:
 
-- Added Spanish translation for the rapido.plone documentation.
+- Added Spanish translation for the rapido.extensions documentation.
   [macagua]
 
-- Added i18n support for the rapido.plone documentation.
+- Added i18n support for the rapido.extensions documentation.
   [macagua]
 
 Bug fixes:
 
-- Updated the source code from the rapido.plone tutorial about the rating app.
+- Updated the source code from the rapido.extensions tutorial about the rating app.
   [macagua]
 
-- Updated the rapido.plone tutorial documentation about the rating app.
+- Updated the rapido.extensions tutorial documentation about the rating app.
   [macagua]
 
 - Make it work in an Archetypes free environment:
@@ -63,7 +63,7 @@ Bug fixes:
 
 Breaking changes:
 
-- rapido.plone requires plone.resource 1.2
+- rapido.extensions requires plone.resource 1.2
 
 New features:
 

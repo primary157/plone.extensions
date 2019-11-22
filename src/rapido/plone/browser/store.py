@@ -3,10 +3,10 @@ from Products.Five.browser import BrowserView
 from plone.app.theming.utils import getAvailableThemes
 from plone.app.theming.utils import getCurrentTheme
 
-from rapido.plone.app import get_app
-from rapido.plone.utils import getAvailableRapidoApps, getRapidoAppFromTheme
-from rapido.plone.utils import cloneLocalRapidoApp
-from rapido.plone.utils import ThemeNotFound, RapidoAppNotFound, RapidoAppAlreadyExists
+from rapido.extensions.app import get_app
+from rapido.extensions.utils import getAvailableRapidoApps, getRapidoAppFromTheme
+from rapido.extensions.utils import cloneLocalRapidoApp
+from rapido.extensions.utils import ThemeNotFound, RapidoAppNotFound, RapidoAppAlreadyExists
 
 
 

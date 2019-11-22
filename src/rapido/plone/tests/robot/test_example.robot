@@ -4,17 +4,17 @@
 #
 # Run this robot test stand-alone:
 #
-#  $ bin/test -s rapido.plone -t test_example.robot --all
+#  $ bin/test -s rapido.extensions -t test_example.robot --all
 #
 # Run this robot test with robot server (which is faster):
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src rapido.plone.testing.RAPIDO_PLONE_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src rapido.extensions.testing.RAPIDO_PLONE_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #
-# $ bin/robot src/rapido/plone/tests/robot/test_example.robot
+# $ bin/robot src/rapido/extensions/tests/robot/test_example.robot
 #
 # See the http://docs.plone.org for further details (search for robot
 # framework).

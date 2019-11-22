@@ -5,7 +5,7 @@ Install Plone, then modify ``buildout.cfg`` to add Rapido as a dependency::
 
     eggs =
         ...
-        rapido.plone
+        rapido.extensions
 
     [versions]
     plone.resource = 1.2

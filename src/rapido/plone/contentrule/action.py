@@ -8,8 +8,8 @@ from zope.interface import implements, Interface
 from zope import schema
 
 from rapido.core.exceptions import NotFound
-from rapido.plone import _
-from rapido.plone.app import get_app
+from rapido.extensions import _
+from rapido.extensions.app import get_app
 
 
 class IAction(Interface):
@@ -40,7 +40,7 @@ class Action(SimpleItem):
     block = ''
     method = ''
 
-    element = 'rapido.plone.Action'
+    element = 'rapido.extensions.Action'
 
     @property
     def summary(self):

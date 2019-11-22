@@ -11,7 +11,7 @@ from zope.publisher.interfaces import IPublishTraverse
 
 from rapido.core.exceptions import NotAllowed, Unauthorized, NotFound
 from rapido.core.interfaces import IRest, IDisplay
-from rapido.plone.app import get_app
+from rapido.extensions.app import get_app
 
 
 class PythonObjectEncoder(json.JSONEncoder):

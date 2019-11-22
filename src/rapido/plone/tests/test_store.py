@@ -14,10 +14,10 @@ from plone.testing.z2 import Browser
 from zope.component import getUtility, provideUtility
 from zope.publisher.browser import TestRequest
 
-from rapido.plone.app import get_app
-from rapido.plone.utils import getAvailableRapidoApps, getRapidoAppFromTheme
-from rapido.plone.utils import cloneLocalRapidoApp
-from rapido.plone.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
+from rapido.extensions.app import get_app
+from rapido.extensions.utils import getAvailableRapidoApps, getRapidoAppFromTheme
+from rapido.extensions.utils import cloneLocalRapidoApp
+from rapido.extensions.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
 
 test_dir_path = os.path.dirname(__file__)
 
@@ -61,8 +61,8 @@ class TestCase(unittest.TestCase):
         Globals.DevelopmentMode = False
     
     def test_rapido_apps_from_theme(self):
-        """ Test the list of rapido apps found in the rapido.plone.tests theme."""
-        apps = getRapidoAppFromTheme("rapido.plone.tests")
+        """ Test the list of rapido apps found in the rapido.extensions.tests theme."""
+        apps = getRapidoAppFromTheme("rapido.extensions.tests")
         self.assertEquals(apps, [u'otherapp', u'testapp'])
     
     def test_available_rapido_apps(self):
@@ -76,7 +76,7 @@ class TestCase(unittest.TestCase):
     def test_install_rapido_app_from_another_theme(self):
         """ Test the installation of a rapido app from another theme inside the given theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=rapidotest&app_id=testapp')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=rapidotest&app_id=testapp')
         resp = json.loads(self.browser.contents)
         self.assertEquals(resp["error"], False)
         apps = getRapidoAppFromTheme("rapidotest")
@@ -106,44 +106,44 @@ class TestCase(unittest.TestCase):
     def test_install_invalid_rapido_app_from_theme(self):
         """ Test if an error will be thrown when an invalid rapido app is given for the source theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=rapidotest&app_id=test')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=rapidotest&app_id=test')
         resp = json.loads(self.browser.contents)
-        self.assertEquals(resp["error"], "test rapido app is not found in rapido.plone.tests theme")
+        self.assertEquals(resp["error"], "test rapido app is not found in rapido.extensions.tests theme")
         
     def test_install_rapido_app_in_invalid_theme(self):
         """ Test if an error will be thrown when installing a rapido app from another theme to an invalid theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=rapidot&app_id=testapp')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=rapidot&app_id=testapp')
         resp = json.loads(self.browser.contents)
         self.assertEquals(resp["error"], "rapidot theme not found")
         
     def test_install_rapido_app_from_another_theme_twice(self):
         """ Test if a rapido app can be installed twice."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=rapidotest&app_id=testapp')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=rapidotest&app_id=testapp')
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=rapidotest&app_id=testapp')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=rapidotest&app_id=testapp')
         resp = json.loads(self.browser.contents)
         self.assertEquals(resp["error"], "A rapido app with testapp id already exists in rapidotest")
 
     def test_install_rapido_app_from_another_theme_link(self):
         """ Test if a rapido app can be installed by using reference to another theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=linked&app_id=testapp&make_link=1')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=linked&app_id=testapp&make_link=1')
         resp = json.loads(self.browser.contents)
         self.assertEquals(resp["error"], False)
 
     def test_install_rapido_app_from_another_theme_with_make_link_false(self):
         """ Test if a rapido app can be installed by using reference to another theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=linked&app_id=testapp&make_link=0')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=linked&app_id=testapp&make_link=0')
         resp = json.loads(self.browser.contents)
         self.assertEquals(resp["error"], False)
 
     def test_install_linked_rapido_app_from_another_theme(self):
         """ Test if a referenced rapido app can be installed from another theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=linked&app_id=testapp&make_link=1')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=linked&app_id=testapp&make_link=1')
         self.browser.open(
             self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=linked&destination_id=rapidotest&app_id=testapp')
         resp = json.loads(self.browser.contents)
@@ -152,7 +152,7 @@ class TestCase(unittest.TestCase):
     def test_install_linked_rapido_app_from_another_them_linked(self):
         """ Test if a referenced rapido app can be installed by using reference from another theme."""
         self.browser.open(
-            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.plone.tests&destination_id=linked&app_id=testapp&make_link=1')
+            self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=rapido.extensions.tests&destination_id=linked&app_id=testapp&make_link=1')
         self.browser.open(
             self.portal.absolute_url() + '/@@rapido-store-api?action=import&source_id=linked&destination_id=rapidotest&app_id=testapp&make_link=1')
         resp = json.loads(self.browser.contents)

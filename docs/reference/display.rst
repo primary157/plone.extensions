@@ -31,7 +31,7 @@ Example:
 Extra views
 -----------
 
-.. warning:: Since rapido.plone 1.1, we can declare first-class Plone views from Rapido, but it requires plone.resources 1.2.
+.. warning:: Since rapido.extensions 1.1, we can declare first-class Plone views from Rapido, but it requires plone.resources 1.2.
 
 If we do not want to just inject a small piece of HTML in existing pages,
 but use a Rapido block as the main part of the page, we can declare a block as a view in its YAML file:
@@ -53,7 +53,7 @@ If the ``with_theme`` property is ``false``, the page is rendered without the Pl
 Extra views before 1.1
 ----------------------
 
-**DEPRECATED since rapido.plone 1.1**
+**DEPRECATED since rapido.extensions 1.1**
 
 If we do not want to just inject a small piece of HTML in existing pages,
 but create a new view for our contents, we can use the Rapido **neutral views**.
@@ -153,7 +153,7 @@ Rapido provides a Mosaic tile, so any Rapido block can be added as a tile to
 our layouts.
 
 To enable it, we need to install Mosaic and then to import a specific Rapido
-Generic Setup profile named **"rapido.plone mosaic tile"** from the *ZMI >>>
+Generic Setup profile named **"rapido.extensions mosaic tile"** from the *ZMI >>>
 portal_setup >>> Import* and click on **"Import all steps"** button.
 
 Here the **"Import"** page link from **portal_setup** tool for run Generic Setup profile:

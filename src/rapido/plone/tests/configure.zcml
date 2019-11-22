@@ -3,7 +3,7 @@
     xmlns:plone="http://namespaces.plone.org/plone">
 
     <include package="plone.app.theming"/>
-    <include package="rapido.plone"/>
+    <include package="rapido.extensions"/>
 
     <plone:static directory="resources" type="theme" />
     <plone:static directory="other" name="other" type="theme" />

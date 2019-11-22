@@ -64,9 +64,9 @@ msgstr ""
 ":doc:`./installation`)."
 
 #: ../tutorial.rst:22
-msgid "Install the ``rapido.plone`` add-on from Plone site setup."
+msgid "Install the ``rapido.extensions`` add-on from Plone site setup."
 msgstr ""
-"Instale el complemento ``rapido.plone`` desde la Configuración del sitio "
+"Instale el complemento ``rapido.extensions`` desde la Configuración del sitio "
 "de Plone."
 
 #: ../tutorial.rst:25

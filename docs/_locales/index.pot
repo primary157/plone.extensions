@@ -33,7 +33,7 @@ msgid "Creating a small form able to send an email, or to store some data, gener
 msgstr ""
 
 #: ../index.rst:21
-msgid "**rapido.plone** allows any developer having a little knowledge of HTML and a little knowledge of Python to implement custom elements and insert them anywhere they want in their Plone site."
+msgid "**rapido.extensions** allows any developer having a little knowledge of HTML and a little knowledge of Python to implement custom elements and insert them anywhere they want in their Plone site."
 msgstr ""
 
 #: ../index.rst:26
@@ -41,7 +41,7 @@ msgid "How?"
 msgstr ""
 
 #: ../index.rst:28
-msgid "The unique interface to build applications with rapido.plone is the **Plone theming tool**."
+msgid "The unique interface to build applications with rapido.extensions is the **Plone theming tool**."
 msgstr ""
 
 #: ../index.rst:31

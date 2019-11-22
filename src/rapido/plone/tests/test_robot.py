@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-from rapido.plone.testing import RAPIDO_PLONE_ACCEPTANCE_TESTING  # noqa
+from rapido.extensions.testing import RAPIDO_PLONE_ACCEPTANCE_TESTING  # noqa
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
 

@@ -3,4 +3,4 @@ omit =
     */test*
 
 include =
-    src/rapido/plone/*
+    src/rapido/extensions/*

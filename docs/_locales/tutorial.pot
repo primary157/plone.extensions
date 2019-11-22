@@ -45,7 +45,7 @@ msgid "Run buildout to deploy Rapido and its dependencies (see :doc:`./installat
 msgstr ""
 
 #: ../tutorial.rst:22
-msgid "Install the ``rapido.plone`` add-on from Plone site setup."
+msgid "Install the ``rapido.extensions`` add-on from Plone site setup."
 msgstr ""
 
 #: ../tutorial.rst:25

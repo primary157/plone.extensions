@@ -13,9 +13,9 @@ from zExceptions import NotFound
 from zope.component import getUtility, provideUtility
 from zope.publisher.browser import TestRequest
 
-from rapido.plone.app import get_app
-from rapido.plone.handlers import is_yaml
-from rapido.plone.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
+from rapido.extensions.app import get_app
+from rapido.extensions.handlers import is_yaml
+from rapido.extensions.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
 
 test_dir_path = os.path.dirname(__file__)
 
@@ -46,7 +46,7 @@ class TestCase(unittest.TestCase):
 
         self.settings = getUtility(IRegistry).forInterface(IThemeSettings)
         self.settings.enabled = True
-        theme = getTheme('rapido.plone.tests')
+        theme = getTheme('rapido.extensions.tests')
         applyTheme(theme)
 
         import transaction

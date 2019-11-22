@@ -2,13 +2,13 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="rapido.plone">
+    i18n_domain="rapido.extensions">
 
     <include package="plone.tiles" />
     <include package="plone.app.tiles" />
 
     <plone:tile
-        name="rapido.plone.tile"
+        name="rapido.extensions.tile"
         title="Rapido tile"
         description="A tile displaying a rapido element"
         add_permission="zope.Public"

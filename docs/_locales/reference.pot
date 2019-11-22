@@ -331,7 +331,7 @@ msgid "Extra views"
 msgstr ""
 
 #: ../reference/display.rst:34
-msgid "Since rapido.plone 1.1, we can declare first-class Plone views from Rapido, but it requires plone.resources 1.2."
+msgid "Since rapido.extensions 1.1, we can declare first-class Plone views from Rapido, but it requires plone.resources 1.2."
 msgstr ""
 
 #: ../reference/display.rst:36
@@ -359,7 +359,7 @@ msgid "Extra views before 1.1"
 msgstr ""
 
 #: ../reference/display.rst:56
-msgid "**DEPRECATED since rapido.plone 1.1**"
+msgid "**DEPRECATED since rapido.extensions 1.1**"
 msgstr ""
 
 #: ../reference/display.rst:58
@@ -468,7 +468,7 @@ msgid "Rapido provides a Mosaic tile, so any Rapido block can be added as a tile
 msgstr ""
 
 #: ../reference/display.rst:155
-msgid "To enable it, we need to install Mosaic and then to import a specific Rapido Generic Setup profile named **\"rapido.plone mosaic tile\"** from the *ZMI >>> portal_setup >>> Import* and click on **\"Import all steps\"** button."
+msgid "To enable it, we need to install Mosaic and then to import a specific Rapido Generic Setup profile named **\"rapido.extensions mosaic tile\"** from the *ZMI >>> portal_setup >>> Import* and click on **\"Import all steps\"** button."
 msgstr ""
 
 #: ../reference/display.rst:159

@@ -1,6 +1,6 @@
 from Products.Five.browser import BrowserView
 
-from rapido.plone.app import get_app
+from rapido.extensions.app import get_app
 
 
 class RapidoCall(BrowserView):

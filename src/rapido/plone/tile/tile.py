@@ -5,7 +5,7 @@ from zope import schema
 from zope.interface import implements
 from plone.tiles.interfaces import ITile
 
-from rapido.plone import _
+from rapido.extensions import _
 
 
 class IRapidoTile(model.Schema):

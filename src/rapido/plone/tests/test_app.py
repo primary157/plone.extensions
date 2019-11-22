@@ -13,8 +13,8 @@ from plone.resource.directory import FilesystemResourceDirectory
 from plone.resource.interfaces import IResourceDirectory
 from plone.app.testing import login
 from plone.testing.z2 import logout
-from rapido.plone.app import get_app
-from rapido.plone.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
+from rapido.extensions.app import get_app
+from rapido.extensions.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
 from zope.component import getUtility, provideUtility
 from zope.publisher.browser import TestRequest
 
@@ -39,7 +39,7 @@ class TestCase(unittest.TestCase):
 
         self.settings = getUtility(IRegistry).forInterface(IThemeSettings)
         self.settings.enabled = True
-        theme = getTheme('rapido.plone.tests')
+        theme = getTheme('rapido.extensions.tests')
         applyTheme(theme)
 
         import transaction

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the rapido.plone package."""
+"""Installer for the rapido.extensions package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -18,7 +18,7 @@ long_description = (
 
 
 setup(
-    name='rapido.plone',
+    name='rapido.extensions',
     version='1.1.2.dev0',
     description="Rapido for Plone",
     long_description=long_description,
@@ -33,7 +33,7 @@ setup(
     keywords='Python Plone rapido',
     author='Eric BREHAULT',
     author_email='ebrehault@gmail.com',
-    url='https://github.com/collective/rapido.plone',
+    url='https://github.com/collective/rapido.extensions',
     license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['rapido'],

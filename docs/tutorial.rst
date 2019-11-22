@@ -19,7 +19,7 @@ Prerequisites
 
 Run buildout to deploy Rapido and its dependencies (see :doc:`./installation`).
 
-Install the ``rapido.plone`` add-on from Plone site setup.
+Install the ``rapido.extensions`` add-on from Plone site setup.
 
 Initializing the Rapido app
 ---------------------------

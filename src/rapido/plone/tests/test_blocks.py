@@ -18,7 +18,7 @@ import Globals
 import unittest2 as unittest
 
 from rapido.core.exceptions import ExecutionError
-from rapido.plone.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
+from rapido.extensions.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
 
 
 class TestCase(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestCase(unittest.TestCase):
 
         self.settings = getUtility(IRegistry).forInterface(IThemeSettings)
         self.settings.enabled = True
-        theme = getTheme('rapido.plone.tests')
+        theme = getTheme('rapido.extensions.tests')
         applyTheme(theme)
 
         import transaction

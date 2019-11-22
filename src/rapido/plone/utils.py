@@ -3,7 +3,7 @@ import StringIO
 from plone.app.theming.utils import getAvailableThemes
 from plone.resource.utils import queryResourceDirectory, cloneResourceDirectory
 from zope.component import queryUtility
-from rapido.plone.app import get_app, get_theme_directory
+from rapido.extensions.app import get_app, get_theme_directory
 
 
 

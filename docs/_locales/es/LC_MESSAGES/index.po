@@ -45,11 +45,11 @@ msgstr ""
 
 #: ../index.rst:21
 msgid ""
-"**rapido.plone** allows any developer having a little knowledge of HTML "
+"**rapido.extensions** allows any developer having a little knowledge of HTML "
 "and a little knowledge of Python to implement custom elements and insert "
 "them anywhere they want in their Plone site."
 msgstr ""
-"**rapido.plone** permite a cualquier desarrollador tener un poco de "
+"**rapido.extensions** permite a cualquier desarrollador tener un poco de "
 "conocimiento de HTML y un poco de conocimiento de Python para implementar "
 "elementos personalizados e insertarlos donde quieran en su sitio Plone."
 
@@ -59,10 +59,10 @@ msgstr "¿Cómo?"
 
 #: ../index.rst:28
 msgid ""
-"The unique interface to build applications with rapido.plone is the "
+"The unique interface to build applications with rapido.extensions is the "
 "**Plone theming tool**."
 msgstr ""
-"La interfaz única para crear aplicaciones con rapido.plone es la herramienta "
+"La interfaz única para crear aplicaciones con rapido.extensions es la herramienta "
 "**Plone theming**."
 
 #: ../index.rst:31

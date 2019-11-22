@@ -15,8 +15,8 @@ import unittest2 as unittest
 from zope.component import getUtility, getMultiAdapter
 from zope.interface import implements, Interface
 
-from rapido.plone.contentrule.action import Action, EditFormView
-from rapido.plone.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
+from rapido.extensions.contentrule.action import Action, EditFormView
+from rapido.extensions.testing import RAPIDO_PLONE_FUNCTIONAL_TESTING
 
 
 class DummyEvent(object):
@@ -36,7 +36,7 @@ class TestRapidoAction(unittest.TestCase):
 
         self.settings = getUtility(IRegistry).forInterface(IThemeSettings)
         self.settings.enabled = True
-        theme = getTheme('rapido.plone.tests')
+        theme = getTheme('rapido.extensions.tests')
         applyTheme(theme)
 
         import transaction
@@ -46,12 +46,12 @@ class TestRapidoAction(unittest.TestCase):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
     def testRegistered(self):
-        element = getUtility(IRuleAction, name='rapido.plone.Action')
-        self.assertEqual('rapido.plone.Action', element.addview)
+        element = getUtility(IRuleAction, name='rapido.extensions.Action')
+        self.assertEqual('rapido.extensions.Action', element.addview)
         self.assertEqual('edit', element.editview)
 
     def testInvokeAddView(self):
-        element = getUtility(IRuleAction, name='rapido.plone.Action')
+        element = getUtility(IRuleAction, name='rapido.extensions.Action')
         storage = getUtility(IRuleStorage)
         storage[u'foo'] = Rule()
         rule = self.portal.restrictedTraverse('++rule++foo')
@@ -74,7 +74,7 @@ class TestRapidoAction(unittest.TestCase):
             u'Call Rapido method hello from testapp/rule')
 
     def testInvokeEditView(self):
-        element = getUtility(IRuleAction, name='rapido.plone.Action')
+        element = getUtility(IRuleAction, name='rapido.extensions.Action')
         e = Action()
         editview = getMultiAdapter((e, self.request), name=element.editview)
         self.assertTrue(isinstance(editview, EditFormView))
