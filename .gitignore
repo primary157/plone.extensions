@@ -1,5 +1,4 @@
-src/
-^src/rapido/
+^src/rapido
 *.egg-info
 *.egg
 *.mo

@@ -2,19 +2,9 @@
 rapido.extensions
 ====================
 
-**Happy hacking with Plone**
+**Extending Rapido.Plone**
 
-.. image:: https://raw.githubusercontent.com/collective/rapido.extensions/master/docs/files/logo-rapido.png
-
-.. image:: https://secure.travis-ci.org/collective/rapido.extensions.png?branch=master
-    :target: http://travis-ci.org/collective/rapido.extensions
-    :alt: Tests
-.. image:: https://landscape.io/github/collective/rapido.extensions/master/landscape.svg?style=flat
-    :target: https://landscape.io/github/collective/rapido.extensions/master
-    :alt: Code Health
-.. image:: https://coveralls.io/repos/collective/rapido.extensions/badge.svg?branch=master&service=github
-    :target: https://coveralls.io/github/collective/rapido.extensions?branch=master
-    :alt: Coverage
+**rapido.plone repository:** *https://github.com/collective/rapido.plone*
 
 What for?
 ---------
